@@ -1,0 +1,439 @@
+@charset "UTF-8";
+
+body {
+    margin: auto; /*Centrera sidan */
+    max-width: 860px;
+    font-family: sans-serif;
+    font-size: 100%; /*Startvärde */
+    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
+
+}
+
+/*
+header, section, footer{
+    outline: 1px solid red;
+}
+*/
+
+header{
+    text-align: center;
+}
+.startpage h1 {
+    font-size: 500%; /*Massiv rubrik på startsidan */
+}
+.tagline {
+    font-size: 120%;
+    padding: 0,5em;/*Avstånd till kantlinje */
+    border-top: 2px solid #00af64;  /* Här på border top gör de gröna strecken ovanför texten "vi hjälper dig förstå"*/
+    border-bottom: 2px solid #00af64; /* Här gjorde jag en extra linje för nedre delen, jag tog bort double för det ska bara vara ett vanligt streck. */
+    margin: 1em 0; /*Avstånd nedåt men inte uppåt */
+    
+    
+}
+
+.menu > li,.menu > h2, .menu {     /* Både för index och om-oss html */ /* När jag la till ".menu" så försvann de gröna strecken på "vilka vi är texten" */
+    margin: 0 0 1em;
+    padding: 2em 0; 
+    background-color: #f5f5f5; /*Mycket ljusgrå färg*/
+    text-align: center;     
+}
+ footer {   /* Här fixar jag färg samt placering för texten "Lars Gunther..." */
+    margin-top: 3em;
+    text-align: center;
+    color: #999;
+    
+}
+/* Här nedan ger jag storlek på alla sektioner samtidigt så de får samma utseende */ 
+/* La också till ".menu" för att få utseendet till om-oss */
+Section, .menu{    
+    Display: inline-block;
+    Width:20%;
+    margin-right:4px;
+}
+
+.startpage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    
+.startpage header,.startpage footer{
+    flex: 0 0 100%;
+}
+
+.startpage section{
+    flex: 0 0 22%;
+}
+html{
+    margin: 2%;
+}
+.menu a:link,.menu a:visited{  
+    text-decoration: none;
+    color: black;
+}
+.menu a:focus,.menu a:hover{
+    text-decoration: underline;
+    color: #A62F00;
+}
+.menu a:active{
+    text-decoration: underline;
+    color: #FF4900;
+}
+.menu h2, .menu li {                       /* Här gjorde jag som du sa att jag la in ".menu li" */
+    font-family: 'Merienda One', cursive;  
+    box-shadow: inset 0 0 20px #007241; /* Detta ger skuggan och färg som är på sektionera länkarna */
+    border-radius: 50%;   
+}
+h1{
+    font-family: 'Merienda One', cursive;
+}
+h1::first-letter{
+    color: #00af64;  /* Detta sätter grön färg på L:et på Läxhjälpen */
+}
+.startpage .Logo{
+    width: 235p;
+    height: 198;
+}
+.hwrap{
+    display: flex; /*Gör divven till en flex contaner */
+    flex-wrap: wrap; /*Radbryt om de behövs */
+    align-items: center;/*Lägger element centrerat vertikalt */
+    justify-content: center; /*Och intill varandra centrerat */
+}
+.hwrap > a{
+    margin-right: 30px;
+}
+
+
+/* CSS för även "om-oss.html filen */
+.subpage .Logo{
+    width: 146px;
+    height: 123px;
+}
+
+.subpage h1{
+    font-size: 2.6rem;
+
+}
+
+h1>span{
+    color: #A62F00;
+}
+
+.menu{
+    margin: 1em 0;
+    padding: 0;
+    float: left; /* Lägger menu till vänster i "om-oss.html"*/
+}
+
+.menu li, .menu {
+    margin: 0 0 1rem;
+    list-style: none;
+  
+}
+
+.subpage .hwrap{
+    justify-content: space-between;
+}
+
+.subpage .hwrap>a,nav{
+    flex: 0 1 20%;
+    min-width: 146px;
+    margin-right: 10px;
+   /* outline: 1px solid;  /* temporär */
+}
+
+.subpage .hwrap>h1,div[role=main] {
+    flex: 1 1 300px;
+}
+
+.dborder{
+    border: 1px solid #cccc; /* Grå färg bakom person bilderna samt storlek */
+    padding: 5px;
+}
+
+/* Här nedan på article så skapar vi kantlinjer och övrig design på <article> */
+article{
+    padding-bottom: 1em; /* Sista p element bidrar 1em */
+    margin-bottom: 2em;
+    border-bottom: 3px solid #00af64; /* Tog bort double då det ska vara enkla streck i facit */
+    margin-left: 170px; /* Detta gör så att de två gröna strecken som är underst hamnar på samma plats som de två gröna strecken övre i om-oss html filen */
+    padding-left: 10px; /* Här gör jag lite mellanrum från article och menu/nav:en */
+}
+
+article:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Här nedan fixar jag layouten och float. Vänsterspalten i varje article upptas av en figure.
+Höger spalten är enkla stycken.*/
+
+figure{
+    float: left; /* Bilden till vänster om texten*/
+    margin: 0; /* Nollställer webbläsarnas inbyggda stil*/
+}
+
+figure img{
+    width: 128px; /* Här fixar vi till person bilderna i storlek*/
+    height: 128px;
+}
+
+figcaption{
+    font: italic bolder 110% sans-serif;
+    font-family: inherit; /*Återställer efter stenografiegenskaper (Restore after shorthand) */
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+
+/* På article p så aktiverar jag avstavning */
+article p{
+    margin-left: 140px;
+    hyphens: auto;
+}
+
+/* Nedan är CSS kod för 12C */
+table{
+    border-spacing: 0;
+    border: 1px solid #d3d3d3;
+    width: 96%;
+    margin: 1em auto 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgb(0,0,0,0.2);
+}
+
+thead{
+    font-size: 150%;
+    text-shadow: #fff 1px 1px 1px;
+}
+
+th,td{
+    padding: 1.1rem 2.8rem 1.1rem;
+}
+
+th{
+    padding-top: 1.4rem;
+    background: #ddd;
+    text-align: left;
+}
+
+td{
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+th:not(:last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+
+tr:target{
+    background-color: #61d7a4;
+}
+tr:hover{
+    background-color: #ff9b73;
+}
+
+tr{
+    transition: background-color 1s;
+}
+
+tr:nth-child(odd){
+    background-color: #61d7a4;
+}
+
+tr:nth-child(even){
+    background-color: #ff9b73;
+}
+
+td:nth-child(1){
+    width: 50px;
+}
+
+td:nth-child(2){
+    width: 50px;
+}
+
+/* Ovan är CSS kod för uppgift 12C */
+
+/* Här nedan är CSS kod för uppgift 13B i arbetsboken */
+fieldset{
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+legend{
+    font-size: larger;
+}
+
+form p{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+label{
+    flex: 0 1 10ch;
+    text-align: right;
+    padding-right: 1ch;
+}
+
+.reqfield{
+    flex: 0 1 2ch;
+    order: 1;
+    text-align: center;
+    padding-right: 0;
+}
+
+input[type=text],input[type=email],textarea{
+    flex: 1 1 25ch;
+    max-width: 300px;
+}
+
+textarea{
+    height: 5em;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: auto;
+}
+/* Ovan är för uppgift 13B */
+
+/* Nedan är CSS kod för uppgift 15D*/
+/*Som gör så att skärmen ändras beroende på mobil, datorn skärm det är */
+
+@media (max-width: 750px) {
+    .hwrap>a{
+        margin-right: 25px; /* Minskad */
+    }
+    .startpage .Logo{       /*Minskad*/
+        width: 209px;
+        height: 176px;
+    }
+    .startpage>header h1{   
+        font-size: 400%;    /*Minskad*/
+    }
+    p.tagline{
+        font-size: 110%;    /*Minskad*/
+    }
+    .startpage section{
+        flex: 0 0 44%;      /*Dubblad till 44% så att de blir 2+2 */
+    }
+}
+
+@media (max-width: 650px) {
+    .hwrap>a{
+        margin-right: 20px;   /* Minskad igen */
+    }
+    .startpage .Logo{         /*Minskad igen*/
+        width: 183px;
+        height: 154px;
+    }
+    .startpage> header h1{    /* Minskad igen */
+        font-size: 350%;
+    }
+    p.tagline{                /* Minskad igen*/
+        font-size: 105%;
+    }
+}
+
+@media (max-width: 550px) {
+    .hwrap>a{
+        margin-right: 15px;
+    }
+    .startpage .Logo{
+        width: 157px;
+        height: 132px;
+    }
+    .subpage .Logo{
+        width: 116px;
+        height: 98px;
+    }
+    .subpage h1{
+        font-size: 2.1rem;
+    }
+    div[role=main] {
+        flex: 0 0 100%;
+        margin: 0;
+    }
+    .subpage .tagline{     
+        margin: 0.5em 0 0.2em;  /*Krymp*/
+        text-align: right;      /* Knappen till höger */
+    }
+    .tagline button{
+        display: inline;        /* Visar knappen */
+    }
+    .menu>li{
+        margin: 0 0 0.2em;      /* Lite avstånd mellan alternativen*/
+        padding: 0.4em 0;
+        box-shadow: inset 0 0 10px #007241;
+        border-radius: 1em;    /* Inte elliptiska längre */
+    }
+    .subpage .menu{
+        margin: 0 0.1em;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;  /*Animerad effekt */
+    }
+    .menu.show{
+        max-height: 165px;        /* En aning större än vad den kan bli */
+    }
+}
+
+@media(max-width: 476px) {
+    .subpage .hwrap a {
+        flex: 0 0 100%;        /* Loggan hamnar nu i mitten */
+    }
+    .hwrap h1 {
+        margin: 0.1em;         /* Minskad*/
+    }
+}
+
+@media (max-width: 380px) {
+    .startpage>header h1{
+        font-size: 300%;
+    }
+    .startpage section{       /*Enspaltslayouten på startsidan*/
+        flex: 0 0 100%;
+    }
+    figure{                   /* Bilder ovanför texten på "om-oss-sidan"*/
+        float: none;
+        text-align: center;
+    }
+    figcaption{
+        width: 116px;
+        margin: auto;
+    }
+    article p {
+        margin-left: 0;
+    }
+    label{
+        flex: 0 0 auto;      /* Den naturliga bredden*/
+        text-align: left;
+        padding-right: 0;
+    }
+    .reqfield{
+        order: 0;             /* Återför till ordningen i html-koden*/
+    }
+    input[type=text],input[type=email],textarea{
+        flex: 0 0 100%;       /* En egen rad */
+        margin-top: 3px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
