@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+body{
+    border: 1px solid black; /* Sätter en ram runt body samt strl och färg */
+    width: 1000px; 
+    margin: 0 auto; /* Placerar body i mitten */
+    text-align: center;
+    
+}
+
+img{
+    float: left;
+    width: 220px;
+    overflow: auto; 
+    padding-left: 80px; /* Tillfällig */
+}
+
+header{
+border: 1px solid transparent;
+}
+
+h1{
+    color:darkolivegreen; /* Sätter färg på h1 */
+    font-size: 50px;  /* Storlek på texten på h1 */
+}
+
+h2{
+    color: olive; /* Sätter färg på h2 */
+    font-size: 25px; /* Storlek på text på h2 */
+}
+
+h3{
+    color: olive;
+    font-size: 15px;
+    border-top: 1px solid black;
+    text-align: left;
+}
+
+p{
+    text-align: left;
+}
+
+
+
+section >p{        /* Alla p element ändras */
+    font-size: 15px; /* Sätter standar storleken på alla p i sectionerna */
+
+}
+
+section{           /* Alla section element ändras */
+    border: 2px solid black; /* Ramen runtom sectionerna */
+    margin-right: 2px;
+    margin-left: 2px;
+    width: 50%; 
+    
+}
+
+main{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{   
+    margin-top: 3em;
+    text-align: center;
+    color: #999;
+}
